@@ -130,12 +130,15 @@ def main():
     # set_value_in_file('vkhpackages/lib/common/const.dart', "dbrootGaruda", " \"TEST/GARUDA_01\";")
     # set_value_in_file('vkhpackages/lib/common/const.dart', "dbrootSangeetSeva", " \"TEST/SANGEETSEVA_01\";")
 
-    print("Set the remote for the new branch and push")
+    # Set the remote for the new branch and push
     try:
         subprocess.check_output(["git", "push", "-u", "origin", f"{app}_{new_version}"])
         print("Remote set for new branch")
     except subprocess.CalledProcessError:
         print("Failed to set remote for new branch")
+
+    # reset time tracker
+    os.unlink(".timetracker")
    
     print("all operations completed")
     input("Log the Start Date in Github milestone. (Re)Start time tracker and press Enter...")
