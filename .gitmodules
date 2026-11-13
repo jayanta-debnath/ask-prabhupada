@@ -1,0 +1,3 @@
+[submodule "web/jd-react-kit"]
+	path = web/jd-react-kit
+	url = https://github.com/jayanta-debnath/jd-react-kit.git
