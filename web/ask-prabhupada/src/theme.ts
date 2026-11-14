@@ -84,6 +84,8 @@ export const theme = createTheme({
           // Warm saffron cream in light mode, deep dark in dark mode
           backgroundColor: 'light-dark(var(--mantine-color-saffron-0), #1a1008)',
           borderRight: '1px solid light-dark(var(--mantine-color-saffron-2), var(--mantine-color-saffron-9))',
+          // Ensure text is readable against the custom dark background
+          color: 'light-dark(var(--mantine-color-dark-9), var(--mantine-color-gray-0))',
         },
       },
     },
